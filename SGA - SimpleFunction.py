@@ -176,15 +176,15 @@ def wheel_p_selection():
 # pop_mutation_rate: mutation rate in the population
 # mutation_rate: probability of a mutation of a bit 
 def mutation(pop_mutation_rate, mutation_rate):
-    uallele=0;
+    
     for i in range(1,popSize):
         up=np.random.random_integers(100)
         up=up/100
         if up<=pop_mutation_rate:
             for j in range(1,genomeLength):
-                uallele=np.random.random_integers(100)
-                uallele=uallele/100
-                if uallele<=mutation_rate:
+                um=np.random.random_integers(100)
+                um=um/100
+                if um<=mutation_rate:
                     if chromosome[i,j]==0:
                         nchromosome[i,j]=1
                     else:
